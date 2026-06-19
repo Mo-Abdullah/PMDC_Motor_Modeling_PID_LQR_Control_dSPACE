@@ -152,6 +152,8 @@ data/lqr/
 | Author | Profiles |
 | --- | --- |
 | Mohamed H. Abdullah | [![ORCID](https://img.shields.io/badge/ORCID-A6CE39?logo=orcid&logoColor=white)](https://orcid.org/0009-0006-9253-5994) [![Google Scholar](https://img.shields.io/badge/Scholar-4285F4?logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?hl=en&user=ynpcFeQAAAAJ&view_op=list_works&sortby=pubdate) |
+| Zakaria Samer Aladem |  |
+| Megan Magdy Ghaly |  |
 
 ## License
 
