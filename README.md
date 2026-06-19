@@ -45,11 +45,11 @@ The DC motor was represented using a discrete transfer-function model and implem
 
 All three identification methods captured the transient behavior of the motor. The **12 V single-experiment least-squares method** produced the best overall match to the experimental response, while the graphical method remained close and practical. The multiple-experiment least-squares method showed the largest steady-state deviation, likely because averaging across datasets introduced sensitivity to experiment-to-experiment variation.
 
-| Method | Time constant (s) | Gain (rad/s/V) | APE (%) | RMSE (rad/s) | Observation |
-| --- | ---: | ---: | ---: | ---: | --- |
-| Graphical | 0.305 | 13.138 | 0.105 | 1.332 | Good simple estimate |
-| Least squares, one experiment | 0.297 | 13.115 | 0.069 | 1.259 | Best overall fit |
-| Least squares, multiple experiments | 0.310 | 12.848 | 2.104 | 4.882 | Underestimated steady-state response |
+| Method | c1 | c2 | tau_m (s) | K (rad/s/V) | B (N m s/rad) | J (kg m^2) | APE (%) | RMSE (rad/s) | Observation |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| Graphical | N/A | N/A | 0.305 | 13.138 | 0.304 | 4.04E-05 | 0.105 | 1.332 | Good simple estimate |
+| Least squares, one experiment | 0.967 | 0.434 | 0.297 | 13.115 | 0.305 | 3.93E-05 | 0.069 | 1.259 | Best overall fit |
+| Least squares, multiple experiments | 0.968 | 0.408 | 0.310 | 12.848 | 0.307 | 4.10E-05 | 2.104 | 4.882 | Underestimated steady-state response |
 
 <table>
   <tr>
@@ -62,10 +62,6 @@ All three identification methods captured the transient behavior of the motor. T
   </tr>
   <tr>
     <td align="center" width="50%"><img src="media/report_14_transient_comparison.jpg" alt="Transient comparison"><br><sub>Transient comparison</sub></td>
-    <td align="center" width="50%"><img src="media/report_16_performance_metrics.jpg" alt="Performance metrics"><br><sub>Performance metrics</sub></td>
-  </tr>
-  <tr>
-    <td align="center" width="50%"><img src="media/report_15_identified_system_parameters.jpg" alt="Identified system parameters"><br><sub>Identified system parameters</sub></td>
     <td align="center" width="50%"><img src="media/report_11_multiple_experiment_responses_alt.jpg" alt="Alternate multiple voltage step responses"><br><sub>Multiple voltage step responses, alternate view</sub></td>
   </tr>
 </table>
