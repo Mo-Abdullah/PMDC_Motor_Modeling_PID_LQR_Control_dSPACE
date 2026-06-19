@@ -1,0 +1,39 @@
+# MATLAB generated files
+*.asv
+*.m~
+*.mex*
+*.mlx.autosave
+
+# MATLAB reports and caches
+codegen/
+slprj/
+sccprj/
+*.prj
+
+# Simulink caches
+*.slxc
+
+# Generated figures and exports
+*.fig
+*.eps
+*.pdf
+
+# Keep repository media assets visible
+!media/*.png
+!media/*.jpg
+!media/*.jpeg
+!media/*.emf
+
+# Temporary build files
+*.log
+*.tmp
+*.temp
+*_tmp_*
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.agents/
+.vscode/
+.idea/

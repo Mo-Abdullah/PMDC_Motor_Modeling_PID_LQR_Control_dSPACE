@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "DC Motor Modeling, Identification, PID, and LQR Control with dSPACE"
+type: software
+authors:
+  - family-names: Abdullah
+    given-names: Mohamed H.
+    orcid: "https://orcid.org/0009-0006-9253-5994"
+year: 2026

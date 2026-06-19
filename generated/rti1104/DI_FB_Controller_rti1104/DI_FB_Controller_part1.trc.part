@@ -1,0 +1,534 @@
+-- ******** Model variables ***************************************************
+
+group "Model Root"
+	group "Position1" -- block-group
+	{
+	 block: "Outport"
+	}
+		p_3_DI_FB_Controller_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "In1"
+		 flags:   READONLY
+		}
+
+
+
+	endgroup -- block-group "Position1"
+
+	group "Speed Out" -- block-group
+	{
+	 block: "Outport"
+	}
+		p_3_DI_FB_Controller_real_T_0[1]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "In1"
+		 flags:   READONLY
+		}
+
+
+
+	endgroup -- block-group "Speed Out"
+
+	group "Volt" -- block-group
+	{
+	 block: "Outport"
+	}
+		p_3_DI_FB_Controller_real_T_0[2]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "In1"
+		 flags:   READONLY
+		}
+
+
+
+	endgroup -- block-group "Volt"
+
+	group "Desired Position" -- block-group
+	{
+	 block: "Constant"
+	}
+		-- Skipping output Out1
+		p_1_DI_FB_Controller_real_T_0[18]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Desired Position"
+
+	group "Disturbance" -- block-group
+	{
+	 block: "Constant"
+	}
+		-- Skipping output Out1
+		p_1_DI_FB_Controller_real_T_0[11]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Disturbance"
+
+	group "Reset" -- block-group
+	{
+	 block: "Constant"
+	}
+		-- Skipping output Out1
+		p_1_DI_FB_Controller_real_T_0[20]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Reset"
+
+	group "Reset 1" -- block-group
+	{
+	 block: "Constant"
+	}
+		-- Skipping output Out1
+		p_1_DI_FB_Controller_real_T_0[16]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Reset 1"
+
+	group "Reset 2" -- block-group
+	{
+	 block: "Constant"
+	}
+		-- Skipping output Out1
+		p_1_DI_FB_Controller_real_T_0[17]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Reset 2"
+
+	group "Discrete-Time\nIntegrator" -- block-group
+	{
+	 block: "DiscreteIntegrator"
+	}
+		p_0_DI_FB_Controller_real_T_0[6]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+		p_1_DI_FB_Controller_real_T_0[6]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "gainval"
+		 flags:   PARAM
+		}
+		p_1_DI_FB_Controller_real_T_0[7]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "InitialCondition"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Discrete-Time\nIntegrator"
+
+	group "Frequency" -- block-group
+	{
+	 block: "Gain"
+	}
+		p_0_DI_FB_Controller_real_T_0[5]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+		p_1_DI_FB_Controller_real_T_0[4]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Gain"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Frequency"
+
+	group "Gain" -- block-group
+	{
+	 block: "Gain"
+	}
+		p_0_DI_FB_Controller_real_T_0[12]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+		p_1_DI_FB_Controller_real_T_0[15]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Gain"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Gain"
+
+	group "Gain1" -- block-group
+	{
+	 block: "Gain"
+	}
+		p_3_DI_FB_Controller_real_T_0[1]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+		p_1_DI_FB_Controller_real_T_0[5]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Gain"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Gain1"
+
+	group "Gain2" -- block-group
+	{
+	 block: "Gain"
+	}
+		p_0_DI_FB_Controller_real_T_0[13]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+		p_1_DI_FB_Controller_real_T_0[19]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Gain"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Gain2"
+
+	group "Gain3" -- block-group
+	{
+	 block: "Gain"
+	}
+		p_3_DI_FB_Controller_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+		p_1_DI_FB_Controller_real_T_0[2]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Gain"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Gain3"
+
+	group "Gain4" -- block-group
+	{
+	 block: "Gain"
+	}
+		p_0_DI_FB_Controller_real_T_0[10]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+		p_1_DI_FB_Controller_real_T_0[12]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Gain"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Gain4"
+
+	group "Position" -- block-group
+	{
+	 block: "Gain"
+	}
+		p_0_DI_FB_Controller_real_T_0[2]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+		p_1_DI_FB_Controller_real_T_0[1]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Gain"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Position"
+
+	group "Resolution" -- block-group
+	{
+	 block: "Gain"
+	}
+		p_0_DI_FB_Controller_real_T_0[1]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+		p_1_DI_FB_Controller_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Gain"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Resolution"
+
+	group "Steps" -- block-group
+	{
+	 block: "Gain"
+	}
+		p_0_DI_FB_Controller_real_T_0[4]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+		p_1_DI_FB_Controller_real_T_0[3]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Gain"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Steps"
+
+	group "k1" -- block-group
+	{
+	 block: "Gain"
+	}
+		p_0_DI_FB_Controller_real_T_0[8]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+		p_1_DI_FB_Controller_real_T_0[9]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Gain"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "k1"
+
+	group "k2" -- block-group
+	{
+	 block: "Gain"
+	}
+		p_0_DI_FB_Controller_real_T_0[9]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+		p_1_DI_FB_Controller_real_T_0[10]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Gain"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "k2"
+
+	group "kI" -- block-group
+	{
+	 block: "Gain"
+	}
+		p_0_DI_FB_Controller_real_T_0[7]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+		p_1_DI_FB_Controller_real_T_0[8]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Gain"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "kI"
+
+	group "Saturation" -- block-group
+	{
+	 block: "Saturate"
+	}
+		p_3_DI_FB_Controller_real_T_0[2]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+		p_1_DI_FB_Controller_real_T_0[13]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "UpperLimit"
+		 flags:   PARAM
+		}
+		p_1_DI_FB_Controller_real_T_0[14]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "LowerLimit"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Saturation"
+
+	group "Sum" -- block-group
+	{
+	 block: "Sum"
+	}
+		p_0_DI_FB_Controller_real_T_0[14]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "Sum"
+
+	group "Sum1" -- block-group
+	{
+	 block: "Sum"
+	}
+		p_0_DI_FB_Controller_real_T_0[11]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "Sum1"
+
+  
+  
+	group "DS1104ENC_POS_C1" -- subsystem-group
+
+		p_0_DI_FB_Controller_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Enc position"
+		 flags:   OUTPUT|READONLY
+		}
+		p_0_DI_FB_Controller_real_T_0[3]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Enc delta position"
+		 flags:   OUTPUT|READONLY
+		}
+
+	endgroup -- subsystem-group "DS1104ENC_POS_C1"
+  
+  
+	group "DS1104ENC_SETUP" -- subsystem-group
+
+
+	endgroup -- subsystem-group "DS1104ENC_SETUP"
+  
+  
+	group "DS1104ENC_SET_POS_C1" -- subsystem-group
+
+
+	endgroup -- subsystem-group "DS1104ENC_SET_POS_C1"
+  
+  
+	group "DS1104SL_DSP_PWM" -- subsystem-group
+
+
+	endgroup -- subsystem-group "DS1104SL_DSP_PWM"
+  
+  
+	group "RTI Data" -- subsystem-group
+
+
+	endgroup -- subsystem-group "RTI Data"
+  
+  
+	group "Angel Function" -- subsystem-group
+
+		p_0_DI_FB_Controller_real_T_0[17]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "angel_out"
+		 flags:   OUTPUT|READONLY
+		}
+
+
+
+
+	endgroup -- subsystem-group "Angel Function"
+  
+  
+	group "Function 1" -- subsystem-group
+
+		p_0_DI_FB_Controller_real_T_0[16]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "y"
+		 flags:   OUTPUT|READONLY
+		}
+
+
+
+
+	endgroup -- subsystem-group "Function 1"
+  
+  
+	group "Function 2" -- subsystem-group
+
+		p_0_DI_FB_Controller_real_T_0[15]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "y"
+		 flags:   OUTPUT|READONLY
+		}
+
+
+
+
+	endgroup -- subsystem-group "Function 2"
+
+
+
+endgroup -- "Model Root"
