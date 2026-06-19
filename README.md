@@ -45,11 +45,21 @@ The DC motor was represented using a discrete transfer-function model and implem
 
 All three identification methods captured the transient behavior of the motor. The **12 V single-experiment least-squares method** produced the best overall match to the experimental response, while the graphical method remained close and practical. The multiple-experiment least-squares method showed the largest steady-state deviation, likely because averaging across datasets introduced sensitivity to experiment-to-experiment variation.
 
-| Method | c1 | c2 | tau_m (s) | K (rad/s/V) | B (N m s/rad) | J (kg m^2) | APE (%) | RMSE (rad/s) | Observation |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| Graphical | N/A | N/A | 0.305 | 13.138 | 0.304 | 4.04E-05 | 0.105 | 1.332 | Good simple estimate |
-| Least squares, one experiment | 0.967 | 0.434 | 0.297 | 13.115 | 0.305 | 3.93E-05 | 0.069 | 1.259 | Best overall fit |
-| Least squares, multiple experiments | 0.968 | 0.408 | 0.310 | 12.848 | 0.307 | 4.10E-05 | 2.104 | 4.882 | Underestimated steady-state response |
+**Identified System Parameters**
+
+| Method | c1 | c2 | tau_m (s) | K (rad/s/V) | B (N m s/rad) | J (kg m^2) |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Graphical | N/A | N/A | 0.305 | 13.138 | 0.304 | 4.04E-05 |
+| Least squares, one experiment | 0.967 | 0.434 | 0.297 | 13.115 | 0.305 | 3.93E-05 |
+| Least squares, multiple experiments | 0.968 | 0.408 | 0.310 | 12.848 | 0.307 | 4.10E-05 |
+
+**Performance Metrics**
+
+| Method | APE (%) | RMSE (rad/s) | Observation |
+| --- | ---: | ---: | --- |
+| Graphical | 0.105 | 1.332 | Good simple estimate |
+| Least squares, one experiment | 0.069 | 1.259 | Best overall fit |
+| Least squares, multiple experiments | 2.104 | 4.882 | Underestimated steady-state response |
 
 <table>
   <tr>
